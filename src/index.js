@@ -142,15 +142,15 @@ class LazyLoad extends Component {
 
     this.visible = false;
 
-    if (React.Children.count(this.props.children) > 1) {
+    if (React.Children.count(props.children) > 1) {
       console.warn('[react-lazyload] Only one child is allowed to be passed to `LazyLoad`.');
     }
 
-    if (typeof this.props.height !== 'number') {
+    if (typeof props.height !== 'number') {
       console.warn('[react-lazyload] Please add `height` props to <LazyLoad> for better performance.');
     }
 
-    if (this.props.wheel) { // eslint-disable-line
+    if (props.wheel) { // eslint-disable-line
       console.warn('[react-lazyload] Props `wheel` is not supported anymore, try set `overflow` for lazy loading in overflow containers.');
     }
   }
